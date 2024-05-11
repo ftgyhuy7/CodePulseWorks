@@ -1,3 +1,2 @@
-function sumArray(arr) {
-  return arr.reduce((acc, curr) => acc + curr, 0);
-}
+const deepFlatten = (arr) =>
+  [].concat(...arr.map((v) => (Array.isArray(v) ? deepFlatten(v) : v)));
